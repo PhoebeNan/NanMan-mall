@@ -12,6 +12,9 @@
 ##### 需要学习的点
 + commentGenerator：自定义注释生成器
 
++ 使用MybatisGenerator逆向工程时，如果再次生成代码，则只会覆盖三处文件：
+实体entity，*example，*mapper。会在*mapper.xml原文件中追加，不会覆盖，删除*mapper.xml文件即可
+
 ****
 + 泛型方法，是在调用方法的时候指明泛型的具体类型。
 

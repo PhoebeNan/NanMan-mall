@@ -46,7 +46,7 @@ public interface PmsBrandService {
     int deleteBrand(long brandId);
 
     /**
-     * 查询品牌列表，返回分页列表
+     * //6.查询品牌列表，返回分页列表
      * @param pageNum
      * @param pageSize
      * @return

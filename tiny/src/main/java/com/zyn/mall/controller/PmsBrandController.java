@@ -92,7 +92,7 @@ public class PmsBrandController {
         CommonResult commonResult = null;
         if (count == 1) {
             switch (flag) {
-                case "isnert":
+                case "insert":
                     logger.debug("添加品牌成功:", pmsBrand);
                     commonResult = CommonResult.success(pmsBrand);
                     break;
