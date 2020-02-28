@@ -1,4 +1,3 @@
-
 #端口号
 server:
   port: 8080
@@ -9,9 +8,31 @@ spring:
     url: jdbc:mysql://localhost:3306/git-mall?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
     username: root
     password: 1234
+  #配置redis相关
+  redis:
+    host: localhost #redis服务器地址
+    database: 0 #redis数据库索引，默认为0
+    port: 6379 #redis服务器默认连接端口
+    password: #redis服务器默认连接密码，默认为空
+    jedis:
+      pool:
+        max-active: 8 #连接池最大连接数（使用负值表示没有限制）
+        max-wait: -1ms # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-idle: 8 # 连接池中的最大空闲连接
+        min-idle: 0 # 连接池中的最小空闲连接
+    timeout: 3000ms # 连接超时时间（毫秒）
+
+# 自定义redis key
+redis:
+  key:
+    prefix:
+      authCode: "zyn:authCode:"  #自定义redis key的前缀，key= 前缀+telephone
+    expire:
+      authCode: 120 # 验证码超期时间(秒)
 
 #mapper扫描相关
 mybatis:
   mapper-locations:
     - classpath:mapper/*.xml
     - classpath*:com/**/mapper/*.xml
+

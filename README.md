@@ -3,6 +3,26 @@
 + 端口号为：8080
 ****
 
+****
+windows 下redis在后台运行
+1. 进入 DOS窗口
+
+2. 在进入Redis的安装目录
+
+3. 输入：redis-server --service-install redis.windows.conf --loglevel verbose ( 安装redis服务 )
+
+4.  输入：redis-server --service-start ( 启动服务 )
+
+5. 输入：redis-server --service-stop （停止服务）
+
+6. 启动指定的配置文件redis-server --service-start redis.windows-service.conf
+
+通过redis客户端连接redis服务器
+redis-cli.exe -h localhost -p 6379
+
+StringRedisTemplate操作redis数据:[https://www.jianshu.com/p/90de16adc9bf]
+
+****
 ##### 枚举的使用
 [枚举的使用]<https://blog.csdn.net/newbie_907486852/article/details/81027512?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task>
 
