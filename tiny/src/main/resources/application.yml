@@ -36,3 +36,8 @@ mybatis:
     - classpath:mapper/*.xml
     - classpath*:com/**/mapper/*.xml
 
+#测试spring security
+security:
+  basic:
+    enabled: false
+

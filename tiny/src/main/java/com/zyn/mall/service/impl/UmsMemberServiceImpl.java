@@ -41,7 +41,7 @@ public class UmsMemberServiceImpl implements UmsMemberService {
         String value = redisService.get(key);
 
         if(StringUtils.isBlank(value)){
-            return CommonResult.failure("验证码已过期",authCode);
+            return CommonResult.failure("请输入验证码或验证码已过期",authCode);
         }
 
         if (!authCode.equals(value)){

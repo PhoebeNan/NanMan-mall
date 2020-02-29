@@ -25,7 +25,7 @@ public class UmsMemberController {
     @PostMapping("verifyAuthCode")
     @ApiOperation("判断验证码是否正确")
     public CommonResult verifyAuthCode(@RequestParam String telephone,
-                                       @RequestParam String authCode){
+                                       @RequestParam(required = false) String authCode){
 
         return umsMemberService.verifyAuthCode(telephone,authCode);
     }
