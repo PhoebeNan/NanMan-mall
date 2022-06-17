@@ -24,7 +24,7 @@
         <generator-core.version>1.3.3</generator-core.version>
         <mysql-connector.version>8.0.15</mysql-connector.version>
 
-        <fastjson.version>1.2.46</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <beanUtils.version>1.9.3</beanUtils.version>
         <lombok.version>1.18.10</lombok.version>
         <devtools.version>2.1.4.RELEASE</devtools.version>
